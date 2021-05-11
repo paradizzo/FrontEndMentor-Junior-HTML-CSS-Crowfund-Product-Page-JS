@@ -1,0 +1,585 @@
+
+/*** 375px ***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*** CAIXA PARA DISPLAY NONE ***/
+.header-desktop, .donation-box, .thanks-box , .menu-box-mobile{
+    display: none;
+}
+/*** FIM DA CAIXA ***/
+body{
+    background-color:  hsla(0, 0%, 48%, 0.055);
+}
+.main {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+.hero {
+    background-image: url(images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: 40ch;
+}
+/** Botão hamburguer **/
+.menu-btn {
+    justify-content: center;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burguer {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border: 5px;
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burguer::before,
+.menu-btn-burguer::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burguer::before {
+    transform: translateY(-6px);
+}
+.menu-btn-burguer::after {
+    transform: translateY(6px);
+}
+.menu-btn.open .menu-btn-burguer{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn.open .menu-btn-burguer::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn-burguer::after {
+    transform: rotate(-45deg)  translate(35px, 35px);
+}
+/** fim do botão hamburguer **/
+.header-mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 2ch;
+}
+.logo-header-mobile {
+    height: 20px;
+    align-self: center;
+}
+.card-top-box {
+    position: relative;
+    padding: 1ch;
+    background-color: white;
+    margin: 2ch;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20ch;
+    font-size: 16px;
+    font-family: 'Commissioner', sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+}
+.mastercraft {
+    position: absolute;
+    top: -3ch;
+    left: 13.5ch;
+}
+.card-title {
+    font-weight: 700;
+    padding-top: 2ch;
+    padding-bottom: 1ch;
+}
+.card-sub-title {
+    color: rgba(0, 0, 0, 0.493);
+    padding-bottom: 2ch;
+    font-weight: 500;
+}
+.button-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 1ch;
+}
+.card-top-button {
+    border-radius: 40px;
+    padding: 1ch;
+    border: none;
+    background-color: hsl(176, 50%, 47%);
+    width: 75%;
+    color: rgba(255, 255, 255, 0.856);
+    font-weight: 700;
+}
+.progress-box {
+    margin: 2ch;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.progress-box-items {
+    font-family: 'Commissioner', sans-serif;
+    padding: 1ch;
+    list-style: none;
+}
+.progress-items-title {
+    font-weight: 700;
+    font-family: 'Commissioner', sans-serif;
+    margin-bottom: 0;
+}
+.progress-items {
+    line-height: 2ch;
+    padding-bottom: 3ch;
+    padding-top: 2ch;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+}
+.w3-light-grey{
+    margin: 2ch;
+    margin-bottom: 3ch;
+}
+.w3-teal{
+    margin-top: -4ch;
+}
+.about-box {
+    background-color: white;
+    margin: 2ch;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+}
+.textbox-about, .about-items-box {
+    padding: 2ch;
+    list-style: none;
+    font-family: 'Commissioner', sans-serif;
+}
+.about-title {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700;
+    padding-bottom: 1ch;
+}
+.about-sub-title {
+    color: hsl(0, 0%, 48%);
+    padding-bottom: 2ch;
+}
+.about-items {
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    margin-bottom: 2ch;
+}
+.about-items-title {
+    font-weight: 700;
+    margin: 2ch;
+}
+.about-items-title span {
+    font-weight: 500;
+    color: hsl(176, 50%, 47%);
+}
+.about-items-subtitle {
+    margin: 2ch;
+    color: hsl(0, 0%, 48%) ;
+}
+.about-items-button-box {
+    margin: 2ch;
+}
+.counter-items {
+    margin-bottom: 2ch;
+    align-content: center;
+    justify-content: center;
+}
+.counter-items a {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: .5ch;
+}
+.about-button {
+    padding: 1.5ch 3ch 1.5ch 3ch;
+    border: none;
+    color: white;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 40px;
+    font-weight: 700;
+}
+.about-items-box li:nth-child(3n) {
+    opacity: .5;
+}
+#out-of-stock-button{
+    background-color: hsl(0, 0%, 48%);
+}
+.menu-box-mobile.open {
+    display: block;
+    position: absolute;
+    background-color: white;
+    position: absolute;
+    margin-left: 2ch;
+    margin-right: 2ch;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px 80px rgba(0, 0, 0, 0.473);
+    transition: all ease-in-out;
+}
+.menu-box-mobile-list {
+    list-style: none;
+    text-align: left;
+    font-weight: 500;
+}
+.menu-items-mobile {
+    padding: 2ch;
+    font-size: 20px;
+}
+.menu-box-mobile-list :nth-child(2n) {
+   border-top: 1px solid hsla(0, 0%, 48%, 0.322);
+   border-bottom: 1px solid hsla(0, 0%, 48%, 0.322);
+}
+.donation-box.open {
+    display: block;
+    margin: 2ch;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    font-family: 'Commissioner', sans-serif;
+}
+.exit-box {
+    display: flex;
+    margin: 2ch;
+    justify-content: space-between;
+}
+.donation-title {
+    font-weight: 700;
+    font-family: 'Commissioner', sans-serif;
+    margin: 0;
+}
+.icon-close {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-bottom: 2px;
+}
+.icon-close-donation {
+    align-self: center;
+}
+.donation-sub-title {
+    margin: 2ch;
+    font-size: 14px;
+    color: hsl(0, 0%, 48%);
+}
+.donation-items-box {
+    list-style: none;
+    margin: 2ch;
+}
+.donation-items {
+    border: 2px solid rgba(0, 0, 0, 0.062);
+    border-radius: 10px;
+    padding: 2ch;
+    margin-bottom: 2ch;
+}
+.donation-item-header {
+    display: flex;
+    margin-bottom: 2ch;
+}
+#number-counter-top {
+    display: none;
+}
+.donation-title span {
+    display: block;
+    color: hsla(176, 50%, 47%, 0.767);
+}
+.checkbox-section {
+    margin-right: 2ch;
+}
+.donation-description {
+    color: hsla(0, 0%, 48%, 0.801);
+    font-weight: 500;
+    margin-bottom: 2ch;
+}
+.pladge-section {
+    text-align: center;
+}
+.pladge-button-box {
+    display: flex;
+    justify-content: space-between;
+}
+.pladge-button-box input {
+    text-align: center;
+    padding: 1ch;
+    width: 40%;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    border-radius: 40px;
+    outline: none;
+}
+.pladge-button-box input::placeholder {
+    color: rgba(128, 128, 128, 0.281);
+    padding-right: 1.5ch;
+}
+.pladge-title {
+    color:  hsla(0, 0%, 48%, 0.555);
+    margin-bottom: 2ch;
+    border-top: 2px solid rgba(128, 128, 128, 0.555);
+    padding-top: 2ch;
+    font-weight: 500;
+}
+.pledge-continue {
+    align-self: center;
+    text-decoration: none;
+    padding: 1ch;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 40px;
+    width: 50%;
+    color: white;
+    font-weight: 700;
+    z-index: 10;
+}
+.checkbox {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    -moz-opacity: 0;
+    opacity: 0;    
+}
+.container-checkbox {
+    width: 20px;
+    height: 20px;
+    background: #f2f2f2;
+    border: 1px solid #a6a6a698;
+    border-radius: 12px;
+    display: inline-block;
+    margin-right: 2px;
+    position: relative;
+}
+.container-checkbox.selected::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: hsl(176, 50%, 47%);
+    border-radius: 6px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+.donation-items.selected {
+    border: 2px solid hsl(176, 50%, 47%);
+}
+.donation-box.open {
+    box-shadow: 0px 0px 50px 10000px rgba(0, 0, 0, 0.425);
+    position: absolute;
+    top: 10ch;
+}
+.pladge-section {
+    display: none;
+}
+.pladge-section.open {
+    display: block;
+}
+.thanks-box {
+    margin: 2ch;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    font-family: 'Commissioner', sans-serif;
+    text-align: center;
+    padding: 2ch;
+}
+.thanks-box.open {
+    display: block;
+    position: absolute;
+    top: 10ch;
+    box-shadow: 0px 0px 50px 10000px rgba(0, 0, 0, 0.425);
+}
+.thanks-title {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2ch;
+}
+.thanks-sub-title {
+    color:  hsla(0, 0%, 48%, 0.747);
+    margin-bottom: 2ch;
+}
+.thanks-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.5ch 3ch 1.5ch 3ch;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 40px;
+    color: white;
+    font-weight: 700;
+    margin: 2ch;
+}
+.card-top-bookmark.filter {
+    display: none;
+}
+.card-top-bookmark-check {
+    width: 56px;
+    height: 56px;
+    display: none;
+}
+.card-top-bookmark-check.filter {
+    display: block;
+}
+.about-button, .card-top-button , .thanks-button, .pledge-continue{
+    cursor: pointer;
+}
+/*** ACTIVE FRAMES ***/
+.menu-items-mobile:hover {
+    font-weight: 700;
+}
+.card-top-button:hover , .about-button:hover, .pledge-continue:hover, .thanks-button:hover{
+    background-color:  hsl(176, 72%, 28%);
+}
+#out-of-stock-button:hover {
+    background-color: hsl(0, 0%, 48%)
+    ;
+}
+
+/*** 1440px ***/ 
+@media only screen and (min-width: 1440px) {
+    .header-mobile {
+        display: none;
+    }
+    .header-desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 5ch 10ch 5ch 10ch;
+
+    }
+    .hero {
+        background-image: url(images/image-hero-desktop.jpg);
+        background-size: 140ch;
+    }
+    .logo-header-desktop {
+        height: 5ch;
+    }
+    .header-item-box {
+        display: flex;
+        list-style: none;
+    }
+    .header-items {
+        padding-right: 5ch;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 1px;
+        align-self: center;
+    }
+    .card-top-box, .progress-box, .about-box {
+        margin: 2ch 25ch 2ch 25ch;
+    }
+    .card-top-box {
+        margin-top: 15ch;
+    }
+    .mastercraft {
+        left: 42ch;
+    }
+    .button-box {
+        padding: 3ch 5ch 2ch 5ch;
+    }
+    .card-top-button {
+        width: 30%;
+    }
+    .progress-box ul {
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+    }
+    .progress-box-items :nth-child(2n) {
+        border-left: 2px solid hsla(0, 0%, 48%, 0.144);
+        border-right: 2px solid hsla(0, 0%, 48%, 0.144);
+    }
+    .progress-items {
+        padding: 0;
+        margin: 0;
+        margin-top: 5ch;
+        margin-bottom: 5ch;
+        border-bottom: none;
+        padding: 0ch 7ch 0ch 7ch;
+    }
+    .textbox-about, .about-items-box {
+        padding: 5ch;
+    }
+    .about-items-box {
+        padding-top: 0;
+    }
+    .about-items {
+        margin-bottom: 4ch;
+    }
+    .about-items-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-items-title, .about-items-subtitle, .about-items-button-box {
+        margin: 3ch;
+    }
+    .about-items-button-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .counter-items {
+        align-self: center;
+        margin: 0;
+    }
+    .counter-items a {
+        font-size: 40px;
+    }
+    .donation-box.open {
+        margin: 25ch;
+        margin-top: 5ch;
+        padding: 5ch;
+    }
+    .donation-textbox {
+        margin-bottom: 5ch;
+    }
+    .donation-items-box {
+        margin: 1ch;
+    }
+    #counter-items-bottom {
+        display: none;
+    }
+    #number-counter-top {
+        display: block;
+        margin-left: 15ch;
+    }
+    .donation-title {
+        display: flex;
+        align-self: center;
+    }
+    .donation-value {
+        margin-left: 4ch;
+    }
+    .donation-item-header {
+        justify-content: stretch;
+    }
+    .donation-description {
+        margin-left: 3.8ch;
+    }
+    .pladge-section.open{
+        display: flex;
+        justify-content: space-between;
+        border-top: 2px solid hsla(0, 0%, 48%, 0.486);
+        padding-top: 2ch;
+    }
+    .pladge-title {
+        border-top: none;
+    }
+    .pladge-button-box input {
+        height: 45.25px;
+        align-self: center;
+        border: 2px solid hsla(0, 0%, 48%, 0.342);
+    }
+    .thanks-box.open {
+        margin: 50ch;
+        margin-top: 20ch;
+    }
+
+}
